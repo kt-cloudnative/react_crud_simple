@@ -15,7 +15,7 @@ ENV TZ Asia/Seoul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 COPY --from=build /app/build /usr/share/nginx/html
-COPY react-nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./react-nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
