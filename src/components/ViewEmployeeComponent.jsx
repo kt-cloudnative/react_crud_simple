@@ -25,16 +25,20 @@ class ViewEmployeeComponent extends Component {
                     <h3 className = "text-center"> View Employee Details</h3>
                     <div className = "card-body">
                         <div className = "row">
-                            <label> Employee First Name: </label>
-                            <div> { this.state.employee.firstName }</div>
+                            <label> 이름 : </label>
+                            <div> { this.state.employee.empName }</div>
                         </div>
                         <div className = "row">
-                            <label> Employee Last Name: </label>
-                            <div> { this.state.employee.lastName }</div>
+                            <label> 부서명 : </label>
+                            <div> { this.state.employee.empDeptName }</div>
                         </div>
                         <div className = "row">
-                            <label> Employee Email ID: </label>
-                            <div> { this.state.employee.emailId }</div>
+                            <label> 전화번호 : </label>
+                            <div> { this.state.employee.empTelNo }</div>
+                        </div>
+                        <div className = "row">
+                            <label> 이메일 : </label>
+                            <div> { this.state.employee.empMail }</div>
                         </div>
                     </div>
 

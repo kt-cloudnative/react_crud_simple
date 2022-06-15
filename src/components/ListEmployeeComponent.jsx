@@ -38,9 +38,9 @@ class ListEmployeeComponent extends Component {
     render() {
         return (
             <div>
-                 <h2 className="text-center">Employees List</h2>
+                 <h2 className="text-center">임직원 현황</h2>
                  <div className = "row">
-                    <button className="btn btn-primary" onClick={this.addEmployee}> Add Employee</button>
+                    <button className="btn btn-primary" onClick={this.addEmployee}>추가</button>
                  </div>
                  <br></br>
                  <div className = "row">
@@ -48,9 +48,10 @@ class ListEmployeeComponent extends Component {
 
                             <thead>
                                 <tr>
-                                    <th> Employee First Name</th>
-                                    <th> Employee Last Name</th>
-                                    <th> Employee Email Id</th>
+                                    <th> 이름 </th>
+                                    <th> 부서명 </th>
+                                    <th> 전화번호 </th>
+                                    <th> 이메일 </th>
                                     <th> Actions</th>
                                 </tr>
                             </thead>
@@ -59,13 +60,14 @@ class ListEmployeeComponent extends Component {
                                     this.state.employees.map(
                                         employee => 
                                         <tr key = {employee.id}>
-                                             <td> { employee.firstName} </td>   
-                                             <td> {employee.lastName}</td>
-                                             <td> {employee.emailId}</td>
+                                             <td> {employee.empName} </td>   
+                                             <td> {employee.empDeptName}</td>
+                                             <td> {employee.empTelNo}</td>
+                                             <td> {employee.empMail}</td>
                                              <td>
-                                                 <button onClick={ () => this.editEmployee(employee.id)} className="btn btn-info">Update </button>
-                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.deleteEmployee(employee.id)} className="btn btn-danger">Delete </button>
-                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.viewEmployee(employee.id)} className="btn btn-info">View </button>
+                                                 <button onClick={ () => this.editEmployee(employee.id)} className="btn btn-info">변경 </button>
+                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.deleteEmployee(employee.id)} className="btn btn-danger">삭제 </button>
+                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.viewEmployee(employee.id)} className="btn btn-info">보기 </button>
                                              </td>
                                         </tr>
                                     )
