@@ -1,3 +1,6 @@
+#
+# Build stage
+#
 FROM node:14.19.3-alpine as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
@@ -8,6 +11,9 @@ RUN npm install react-scripts@3.4.1 -g --silent
 COPY . ./
 RUN npm run build
 
+#
+# Package stage
+#
 # production environment
 FROM nginx:stable-alpine
 
