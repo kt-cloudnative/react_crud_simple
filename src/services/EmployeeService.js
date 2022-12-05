@@ -13,15 +13,15 @@ class EmployeeService {
     }
 
     getEmployeeById(employeeId){
-        return axios.get("/api/v1/employees" + '/' + employeeId);
+        return axios.get("/api/v1/employees/" +  employeeId);
     }
 
     updateEmployee(employee, employeeId){
-        return axios.put("/api/v1/employees" + '/' + employeeId, employee);
+        return axios.put("/api/v1/employees/" +  employeeId, employee);
     }
 
     deleteEmployee(employeeId){
-        return axios.delete("/api/v1/employees" + '/' + employeeId);
+        return axios.delete("/api/v1/employees/" + employeeId);
     }
 }
 
