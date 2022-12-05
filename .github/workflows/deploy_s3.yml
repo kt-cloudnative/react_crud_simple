@@ -1,9 +1,12 @@
 name: Build and Deploy to S3
 
-on:
-  push:
-    branches:
-      - AWS    # sub-branch[branch name] 브랜치에서 push 이벤트가 일어났을 때 실행
+on:      
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "TAG"
+        required: true
+        default: "master"
 
 jobs:
   build:
