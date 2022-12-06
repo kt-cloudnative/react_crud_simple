@@ -37,6 +37,6 @@ jobs:
           aws s3 cp \
             --recursive \
             --region ap-northeast-2 \
-            build s3://edu-kt # 자신의 레포지토리로 변경해주세요.
+            build s3://edu1-kt # 자신의 레포지토리로 변경해주세요.
 
 
